@@ -1,2 +1,1 @@
-ttt
-Test 3-way merge
+Test 3-way merge done
