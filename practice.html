@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <button id="korean">국어 수업 요일선택 ></button>
+    <h1 id="day1" style="display: inline;"></h1>
+    <br>
+    <button id="math">수학 수업 요일선택 ></button>
+    <h1 id="day2" style="display: inline;"></h1>
+
+<script>
+    const weeks = ['일', '월', '화', '수', '목', '금', '토'];
+    let widx = -1;
+
+    const getNextWeek = () => { 
+
+        widx += 1;
+        if (widx >= weeks.length) widx = 0;
+
+        return `${weeks[widx]}요일`;
+    }
+
+    const korean = document.getElementById('korean');
+    const math = document.getElementById('math');
+    const day1 = document.getElementById('day1');
+    const day2 = document.getElementById('day2');
+    korean.addEventListener('click', function(){
+        day1.textContent = getNextWeek();
+    });
+
+    math.addEventListener('click', function(){
+        day2.textContent = getNextWeek();
+    });
+</script>
+</body>
+</html>

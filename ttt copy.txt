@@ -1,0 +1,7 @@
+Test 3-way merge done
+<<<<<<< HEAD
+I don't care
+Be yourself then
+=======
+I want to be a base
+>>>>>>> 7238d42 (brbase1)

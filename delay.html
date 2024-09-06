@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture Example</title>
+    <script src="script.js" defer>
+        function debounce1(func, delay) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+
+        function throttle(func, delay) {
+            let lastCall = 0;
+            return function(...args) {
+                const now = (new Date()).getTime();
+                if (now - lastCall < delay) {
+                    return;
+                }
+                lastCall = now;
+                func.apply(this, args);
+            };
+        }
+
+        function debounce2(func, delay) {
+            let timer;
+            return function(...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => func.apply(this, args), delay);
+            };
+        }
+
+        const searchBox = document.getElementById('searchBox');
+
+        searchBox.oninput = debounce2(() => {
+            const query = searchBox.value;
+            console.log(new Date().toISOString(), 'search>>', query);
+        }, 500);
+
+        document.getElementById('korean').onclick = debounce1(() => {
+            console.log('국어 수업 버튼 클릭');
+        }, 500);
+
+        document.getElementById('math').onclick = throttle(() => {
+            console.log('수학 수업 버튼 클릭');
+        }, 500);
+
+
+
+    </script>
+</head>
+<body>
+    <button id="korean">국어 수업</button>
+    <button id="math">수학 수업</button>
+    <input id="searchBox"></input>
+</body>
+</html>
