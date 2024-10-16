@@ -121,10 +121,10 @@ const AddRecipe: React.FC<AddRecipeProps> = ({ onAddRecipe, onCancel }) => {
           <ul className="mt-2">
             {tags.map((t, index) => (
               <li key={index} className="flex items-center mt-1">
-                <span className="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-md mr-2">{t}</span>
+                <span className="bg-gray-200 text-gray-600 text-xs font-medium px-2 py-1 rounded-md mr-2">{t}</span>
                 <button
                   onClick={() => handleDeleteTag(index)}
-                  className="text-red-600 hover:text-red-800"
+                  className="text-red-600 hover:text-red-800 text-xs"
                 >
                   삭제
                 </button>
@@ -145,7 +145,7 @@ const AddRecipe: React.FC<AddRecipeProps> = ({ onAddRecipe, onCancel }) => {
               className="flex-1 p-2 text-sm rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <button
-              className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-green-700 transition"
+              className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-blue-700 transition"
               onClick={handleAddIngredient}
             >
               추가
@@ -180,7 +180,7 @@ const AddRecipe: React.FC<AddRecipeProps> = ({ onAddRecipe, onCancel }) => {
               className="flex-1 p-2 text-sm rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <button
-              className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-purple-700 transition"
+              className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-blue-700 transition"
               onClick={handleAddInstruction}
             >
               추가
@@ -192,7 +192,7 @@ const AddRecipe: React.FC<AddRecipeProps> = ({ onAddRecipe, onCancel }) => {
                 <span className="bg-gray-200 text-gray-700 px-2 py-1 text-sm rounded-md mr-2">{instr}</span>
                 <button
                   onClick={() => handleDeleteInstruction(index)}
-                  className="text-red-600 hover:text-red-800"
+                  className="text-red-600 hover:text-red-800 text-xs"
                 >
                   삭제
                 </button>

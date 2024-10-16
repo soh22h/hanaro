@@ -187,7 +187,7 @@ const ModifyRecipe: React.FC<ModifyRecipeProps> = ({ onModifyRecipe, recipes }) 
                 className="flex-1 p-2 text-sm rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
               />
               <button
-                className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-green-700 transition"
+                className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-blue-700 transition"
                 onClick={handleAddIngredient}
               >
                 추가
@@ -224,7 +224,7 @@ const ModifyRecipe: React.FC<ModifyRecipeProps> = ({ onModifyRecipe, recipes }) 
                 className="flex-1 p-2 text-sm rounded-md border border-gray-300 focus:outline-none focus:border-blue-500"
               />
               <button
-                className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-purple-700 transition"
+                className="ml-2 bg-blue-600 text-white p-2 text-sm rounded-md hover:bg-blue-700 transition"
                 onClick={handleAddInstruction}
               >
                 추가

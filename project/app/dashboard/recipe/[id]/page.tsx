@@ -176,7 +176,7 @@ const RecipeDetail: React.FC = () => {
             {versionHistory
               .slice(1, versionHistory.length - 1)
               .map((recipe, index) => (
-                <li key={index} className="flex items-center justify-between">
+                <li key={index} className="flex items-center justify-between mb-2">
                   <span>버전 {index + 1}: (수정일 {recipe.dateModified.toString()})</span>
                   <button
                     onClick={() => restoreVersion(index + 1)}
